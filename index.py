@@ -41,23 +41,32 @@ def play_round():
     else:
         print(winner.capitalize(), "wins!")
 
-    return True
+    return winner
+
 
 def play_game():
-    user_wins = 0
-    computer_wins = 0
-    draws = 0
+    
+    user_wins=0
+    computer_wins=0
+    draws=0
+    
+    
+    
+
+    
+    
+    
 
     while True:
         print("\n--- New Round ---")
         print("Score: User -", user_wins, "Computer -", computer_wins, "Draws -", draws)
-        if not play_round():
-            break
+        x=play_round()
+            
 
-        winner = determine_winner(user_choice, computer_choice)
-        if winner == 'user':
+       # winner = determine_winner(user_choice, computer_choice)
+        if x == 'user':
             user_wins += 1
-        elif winner == 'computer':
+        elif x == 'computer':
             computer_wins += 1
         else:
             draws += 1
